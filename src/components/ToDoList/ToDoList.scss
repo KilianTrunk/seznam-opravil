@@ -1,0 +1,55 @@
+@use '@carbon/react';
+
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$tile-width: 400px;
+
+.todo-list-container {
+  display: flex;
+  justify-content: center;
+  padding: $spacing-medium;
+}
+
+.todo-list-tile {
+  width: $tile-width;
+  padding: $spacing-medium;
+}
+
+.task-input-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: $spacing-medium;
+
+  .bx--text-input-wrapper {
+    flex-grow: 1;
+  }
+
+  .add-task-button {
+    margin-left: $spacing-small;
+  }
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  .todo-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-small 0;
+
+    .cds--checkbox-label-text {
+      flex-grow: 1;
+      word-wrap: break-word;
+      word-break: break-all;
+      overflow-wrap: break-word;
+      margin-right: $spacing-small;
+    }
+
+    .delete-button {
+      margin-left: $spacing-small;
+    }
+  }
+}
