@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent, useCallback } from 'react';
 import { Button, Checkbox, TextInput, Tile } from '@carbon/react';
 import './ToDoList.scss';
 
-interface Task {
+interface ITask {
   text: string;
   isCompleted: boolean;
 }
@@ -10,7 +10,7 @@ interface Task {
 const LOCAL_STORAGE_KEY = 'tasks';
 
 const ToDoList: React.FC = () => {
-  const [tasks, setTasks] = useState<Task[]>(() => {
+  const [tasks, setTasks] = useState<ITask[]>(() => {
     const savedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
